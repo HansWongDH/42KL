@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wding-ha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/25 17:17:16 by wding-ha          #+#    #+#             */
-/*   Updated: 2021/02/25 19:08:02 by wding-ha         ###   ########.fr       */
+/*   Created: 2021/02/25 17:51:10 by wding-ha          #+#    #+#             */
+/*   Updated: 2021/02/25 19:54:44 by wding-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_str_is_alpha(char *str)
-{
-	int index;
-	int valid;
+#include <stdio.h>
 
-	valid = 1;
+char	*ft_strupcase(char *str);
+
+int		main(void)
+{
+	char *strok;
+	char test[6];
+
+	int index;
+
+	strok = "HioiE";
 	index = 0;
-	while (str[index] != '\0')
+	while (index < 6)
 	{
-		if (((str[index] >= 'A' && str[index] <= 'Z'))
-		|| ((str[index] >= 'a' && str[index] <= 'z')))
-		{
-			valid = 1;
-			index++;
-		}
-		else
-		{
-			valid = 0;
-			break ;
-		}
+		test[index] = strok[index] + 0;
+		index++;
 	}
-	return (valid);
+	ft_strupcase(&test[0]);
+	printf("%s \n", strok);
+	printf("%s \n", test);
 }

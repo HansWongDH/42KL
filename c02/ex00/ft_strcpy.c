@@ -6,10 +6,9 @@
 /*   By: wding-ha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 11:21:13 by wding-ha          #+#    #+#             */
-/*   Updated: 2021/02/25 12:41:34 by wding-ha         ###   ########.fr       */
+/*   Updated: 2021/02/25 20:14:59 by wding-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdbool.h>
 
 char	*ft_strcpy(char *dest, char *src)
 {	int index;

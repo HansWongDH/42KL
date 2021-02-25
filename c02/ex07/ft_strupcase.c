@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wding-ha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/25 17:17:16 by wding-ha          #+#    #+#             */
-/*   Updated: 2021/02/25 19:08:02 by wding-ha         ###   ########.fr       */
+/*   Created: 2021/02/25 19:30:56 by wding-ha          #+#    #+#             */
+/*   Updated: 2021/02/25 19:57:45 by wding-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_str_is_alpha(char *str)
+char	*ft_strupcase(char *str)
 {
-	int index;
-	int valid;
+	int		index;
+	char	text;
 
-	valid = 1;
 	index = 0;
 	while (str[index] != '\0')
 	{
-		if (((str[index] >= 'A' && str[index] <= 'Z'))
-		|| ((str[index] >= 'a' && str[index] <= 'z')))
+		text = str[index];
+		if (str[index] >= 97 && str[index] <= 122)
 		{
-			valid = 1;
-			index++;
+			str[index] = text - 32;
 		}
-		else
-		{
-			valid = 0;
-			break ;
-		}
+		index++;
 	}
-	return (valid);
+	return (str);
 }

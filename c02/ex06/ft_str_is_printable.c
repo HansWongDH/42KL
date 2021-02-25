@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wding-ha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/25 17:17:16 by wding-ha          #+#    #+#             */
-/*   Updated: 2021/02/25 19:08:02 by wding-ha         ###   ########.fr       */
+/*   Created: 2021/02/25 19:15:58 by wding-ha          #+#    #+#             */
+/*   Updated: 2021/02/25 19:27:18 by wding-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_str_is_alpha(char *str)
+int		ft_str_is_printable(char *str)
 {
 	int index;
 	int valid;
@@ -19,8 +19,7 @@ int		ft_str_is_alpha(char *str)
 	index = 0;
 	while (str[index] != '\0')
 	{
-		if (((str[index] >= 'A' && str[index] <= 'Z'))
-		|| ((str[index] >= 'a' && str[index] <= 'z')))
+		if (str[index] >= 32 && str[index] <= 126)
 		{
 			valid = 1;
 			index++;

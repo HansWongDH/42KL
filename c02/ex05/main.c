@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wding-ha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/25 17:17:16 by wding-ha          #+#    #+#             */
-/*   Updated: 2021/02/25 19:08:02 by wding-ha         ###   ########.fr       */
+/*   Created: 2021/02/25 17:51:10 by wding-ha          #+#    #+#             */
+/*   Updated: 2021/02/25 19:05:26 by wding-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_str_is_alpha(char *str)
-{
-	int index;
-	int valid;
+#include <stdio.h>
 
-	valid = 1;
-	index = 0;
-	while (str[index] != '\0')
-	{
-		if (((str[index] >= 'A' && str[index] <= 'Z'))
-		|| ((str[index] >= 'a' && str[index] <= 'z')))
-		{
-			valid = 1;
-			index++;
-		}
-		else
-		{
-			valid = 0;
-			break ;
-		}
-	}
-	return (valid);
+int		ft_str_is_uppercase(char *str);
+
+int		main(void)
+{
+	char *strok;
+	char *strnotok;
+
+	strok = "";
+	strnotok = "HELLo";
+	printf("1 is ok %d, ", ft_str_is_uppercase(strok));
+	printf("0 is not %d, ", ft_str_is_uppercase(strnotok));
 }
