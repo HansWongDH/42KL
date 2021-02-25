@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wding-ha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/25 17:17:16 by wding-ha          #+#    #+#             */
-/*   Updated: 2021/02/25 18:35:30 by wding-ha         ###   ########.fr       */
+/*   Created: 2021/02/25 17:51:10 by wding-ha          #+#    #+#             */
+/*   Updated: 2021/02/25 18:20:08 by wding-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_str_is_alpha(char *str)
-{
-	int index;
-	int valid;
+#include <stdio.h>
 
-	index = 0;
-	while (str[index] != '\0')
-	{
-		if (((str[index] >= 'A' && str[index] <= 'Z'))
-		|| ((str[index] >= 'a' && str[index] <= 'z')))
-		{
-			valid = 1;
-			index++;
-		}
-		else
-		{
-			valid = 0;
-			break ;
-			;
-		}
-	}
-	return (valid);
+int		ft_str_is_numeric(char *str);
+
+int		main(void)
+{
+	char *strok;
+	char *strnotok;
+
+	strok = "HELLO0";
+	strnotok = "01234";
+	printf("0 is not %d, ", ft_str_is_numeric(strok));
+	printf("1 is ok %d, ", ft_str_is_numeric(strnotok));
 }

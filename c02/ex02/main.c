@@ -6,7 +6,7 @@
 /*   By: wding-ha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 17:51:10 by wding-ha          #+#    #+#             */
-/*   Updated: 2021/02/25 17:57:24 by wding-ha         ###   ########.fr       */
+/*   Updated: 2021/02/25 18:35:47 by wding-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int		main(void)
 	char *strnotok;
 
 	strok = "HELLO";
-	strnotok = "HELL0";
+	strnotok = "HEL0L";
 	printf("1 is ok %d, ", ft_str_is_alpha(strok));
 	printf("0 is ok %d, ", ft_str_is_alpha(strnotok));
 }
