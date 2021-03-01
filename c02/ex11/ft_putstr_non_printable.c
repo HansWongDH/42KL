@@ -1,30 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wding-ha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/25 16:29:02 by wding-ha          #+#    #+#             */
-/*   Updated: 2021/03/01 16:17:29 by wding-ha         ###   ########.fr       */
+/*   Created: 2021/03/01 17:06:09 by wding-ha          #+#    #+#             */
+/*   Updated: 2021/03/01 18:24:18 by wding-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+#include <unistd.h>
+
+void	ft_putchar(char c)
 {
-	unsigned int index;
+	write(1, &c, 1);
+}
+
+void	ft_putstr_non_printable(char *str)
+{
+	int		index;
+	char	text;
 
 	index = 0;
-	while (index < n)
-	{	
-		if (src[index] != '\0')
-			dest[index] = src[index];
+	while (str[index] != '\0')
+	{
+		if (str[index] == '\0')
+		{
+			break ;
+		}
+		else if (str[index] >= 32 && str[index] <= 126)
+		{
+			ft_putchar(str[index]);
+		}
 		else
 		{
-			dest[index] = '\0';
-			break ;
-		}	
+			ft_putchar('\\');
+			ft_putchar("0123456789abcdef"[index / 16]);
+			ft_putchar("0123456789abcdef"[index % 16]);
+		}
 		index++;
 	}
-	return(dest);
 }

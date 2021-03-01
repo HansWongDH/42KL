@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wding-ha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/25 16:29:02 by wding-ha          #+#    #+#             */
-/*   Updated: 2021/03/01 16:17:29 by wding-ha         ###   ########.fr       */
+/*   Created: 2021/02/28 02:03:33 by wding-ha          #+#    #+#             */
+/*   Updated: 2021/03/01 16:34:13 by wding-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
+	unsigned int count;
 	unsigned int index;
 
+	count = 0;
 	index = 0;
-	while (index < n)
-	{	
-		if (src[index] != '\0')
-			dest[index] = src[index];
-		else
+	while (src[count] != '\0')
+		count++;
+	if 	(size != 0)
+	{
+		while (index < (size - 1)  && src[index] != '\0')
 		{
-			dest[index] = '\0';
-			break ;
-		}	
-		index++;
+			dest[index] = src[index];
+			index++;
+		}
+		dest[index] = '\0';
 	}
-	return(dest);
+	return (count);
 }
+

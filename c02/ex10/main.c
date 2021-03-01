@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wding-ha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/25 16:29:02 by wding-ha          #+#    #+#             */
-/*   Updated: 2021/03/01 16:17:29 by wding-ha         ###   ########.fr       */
+/*   Created: 2021/02/25 11:33:50 by wding-ha          #+#    #+#             */
+/*   Updated: 2021/03/01 16:35:32 by wding-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
-{
-	unsigned int index;
+#include <stdio.h>
+#include <string.h>
 
-	index = 0;
-	while (index < n)
-	{	
-		if (src[index] != '\0')
-			dest[index] = src[index];
-		else
-		{
-			dest[index] = '\0';
-			break ;
-		}	
-		index++;
-	}
-	return(dest);
+char	*ft_strlcpy(char *dest, char *src, unsigned size);
+
+int		main(void)
+{
+	char *src;
+	char dest[12];
+
+	src = "0";
+
+	printf("base   : %s\n", src);
+	strlcpy(dest, src, 2);
+	printf("cpy    : %s\n", dest);
+	ft_strlcpy(dest, src, 2);
+	printf("ft_cpy : %s\n", dest);
 }

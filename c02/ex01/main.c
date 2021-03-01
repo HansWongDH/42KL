@@ -6,36 +6,25 @@
 /*   By: wding-ha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 11:33:50 by wding-ha          #+#    #+#             */
-/*   Updated: 2021/02/25 17:15:40 by wding-ha         ###   ########.fr       */
+/*   Updated: 2021/03/01 16:18:50 by wding-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 
 char	*ft_strncpy(char *dest, char *src, unsigned n);
 
 int		main(void)
 {
-	char src[6] = "HELLO";
-	char dest[6] = "WORLD";
-	char *firstsrc;
-	char *firstdest;
+	char *src;
+	char dest[12];
 
-	firstsrc = &src[0];
-	firstdest = &dest[0];
+	src = "HELLO WORLD";
 
-	int index = 0;
-	while (index <= 5)
-	{
-		printf("%c, ", dest[index]);
-		index++;
-	}
-	ft_strncpy(firstdest, firstsrc, 4);
-	int index2 = 0;
-	while (index2 <= 5)
-	{
-		printf("%c, ", dest[index2]);
-		index2++;
-	}
-	return (0);
+	printf("base   : %s\n", src);
+	strncpy(dest, src, 11);
+	printf("cpy    : %s\n", dest);
+	ft_strncpy(dest, src, 11);
+	printf("ft_cpy : %s\n", dest);
 }

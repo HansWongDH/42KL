@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wding-ha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/25 16:29:02 by wding-ha          #+#    #+#             */
-/*   Updated: 2021/03/01 16:17:29 by wding-ha         ###   ########.fr       */
+/*   Created: 2021/03/01 18:07:00 by wding-ha          #+#    #+#             */
+/*   Updated: 2021/03/01 18:21:42 by wding-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
-{
-	unsigned int index;
+void	ft_putstr_non_printable(char *str);
 
-	index = 0;
-	while (index < n)
-	{	
-		if (src[index] != '\0')
-			dest[index] = src[index];
-		else
-		{
-			dest[index] = '\0';
-			break ;
-		}	
-		index++;
-	}
-	return(dest);
+int		main(void)
+{
+	char *string;
+	
+	string = "Coucou€tu vas bien ?";
+	ft_putstr_non_printable(string);
 }

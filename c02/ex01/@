@@ -6,7 +6,7 @@
 /*   By: wding-ha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 16:29:02 by wding-ha          #+#    #+#             */
-/*   Updated: 2021/03/01 16:17:29 by wding-ha         ###   ########.fr       */
+/*   Updated: 2021/03/01 16:06:58 by wding-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		{
 			dest[index] = '\0';
 			break ;
-		}	
+		}
 		index++;
 	}
 	return(dest);
