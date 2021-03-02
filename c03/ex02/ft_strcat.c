@@ -6,25 +6,27 @@
 /*   By: wding-ha <wding-ha@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 20:19:08 by wding-ha          #+#    #+#             */
-/*   Updated: 2021/03/01 21:19:08 by wding-ha         ###   ########.fr       */
+/*   Updated: 2021/03/02 11:59:56 by wding-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcat(char *dest, char *src)
 {
-	char *joint;
+	int		destlen;
+	int		srclen;
 
-	joint = dest;
-	while (*joint != '\0')
+	destlen = 0;
+	while (dest[destlen] != '\0')
 	{
-		joint++;
+		destlen++;
 	}
-	while (*src != '\0')
+	srclen = 0;
+	while (src[srclen] != '\0')
 	{
-		*joint = *(unsigned char*)src;
-		joint++;
-		src++;
+		dest[destlen] = src[srclen];
+		destlen++;
+		srclen++;
 	}
-	*joint = '\0';
+	dest[destlen] = '\0';
 	return (dest);
 }

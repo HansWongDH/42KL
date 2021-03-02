@@ -6,20 +6,16 @@
 /*   By: wding-ha <wding-ha@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:28:41 by wding-ha          #+#    #+#             */
-/*   Updated: 2021/03/01 20:07:20 by wding-ha         ###   ########.fr       */
+/*   Updated: 2021/03/02 12:11:59 by wding-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_strcmp(char *s1, char *s2)
 {
-	unsigned int comp;
-
 	while (*s1 != '\0' && *s1 == *s2)
 	{
 		s1++;
 		s2++;
 	}
-	comp = (*s1 - *s2);
-	
-	return (comp);
+	return (*(unsigned char*)s1 - *(unsigned char*)s2);
 }

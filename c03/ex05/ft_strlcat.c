@@ -6,14 +6,14 @@
 /*   By: wding-ha <wding-ha@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/02 10:59:18 by wding-ha          #+#    #+#             */
-/*   Updated: 2021/03/02 11:24:20 by wding-ha         ###   ########.fr       */
+/*   Updated: 2021/03/02 12:13:59 by wding-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int 	ft_strlen(char *str)
+unsigned int	ft_strlen(char *str)
 {
 	unsigned int index;
-	
+
 	index = 0;
 	while (str[index] != '\0')
 	{
@@ -36,7 +36,6 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		result += size;
 	else
 		result += destlen;
-
 	index = 0;
 	while (src[index] != '\0' && destlen + 1 < size)
 	{
