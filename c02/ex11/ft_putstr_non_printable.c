@@ -6,7 +6,7 @@
 /*   By: wding-ha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 17:06:09 by wding-ha          #+#    #+#             */
-/*   Updated: 2021/03/01 18:24:18 by wding-ha         ###   ########.fr       */
+/*   Updated: 2021/03/02 22:02:50 by wding-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	ft_putchar(char c)
 void	ft_putstr_non_printable(char *str)
 {
 	int		index;
-	char	text;
 
 	index = 0;
 	while (str[index] != '\0')
@@ -36,8 +35,8 @@ void	ft_putstr_non_printable(char *str)
 		else
 		{
 			ft_putchar('\\');
-			ft_putchar("0123456789abcdef"[index / 16]);
-			ft_putchar("0123456789abcdef"[index % 16]);
+			ft_putchar("0123456789abcdef"[str[index] / 16]);
+			ft_putchar("0123456789abcdef"[str[index] % 16]);
 		}
 		index++;
 	}

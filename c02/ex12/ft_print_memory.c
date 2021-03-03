@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_print_memory.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wding-ha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/25 16:29:02 by wding-ha          #+#    #+#             */
-/*   Updated: 2021/03/01 16:06:58 by wding-ha         ###   ########.fr       */
+/*   Created: 2021/03/03 08:34:18 by wding-ha          #+#    #+#             */
+/*   Updated: 2021/03/03 08:50:56 by wding-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
-{
-	unsigned int index;
+#include <unistd>
 
-	index = 0;
-	while (index < n)
-	{	
-		if (src[index] != '\0')
-			dest[index] = src[index];
-		else
-		{
-			dest[index] = '\0';
-			break ;
-		}
-		index++;
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_is_printable(char *c)
+{
+	if (*c >= 32 && *c < 127)
+		ft_putchar(c);
+	else
+		ft_putchar('.');
+}
+
+void	*ft_print_memory(void *addr, unsigned int size)
+{
+	char *add;
+	
+	*add = (char *)addr;
+	while (*add != '\0')
+	{
+		ft_is_printable(*add)
 	}
-	return(dest);
 }

@@ -6,7 +6,7 @@
 /*   By: wding-ha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 16:29:02 by wding-ha          #+#    #+#             */
-/*   Updated: 2021/03/01 16:17:29 by wding-ha         ###   ########.fr       */
+/*   Updated: 2021/03/02 21:45:59 by wding-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,15 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	unsigned int index;
 
 	index = 0;
-	while (index < n)
-	{	
-		if (src[index] != '\0')
-			dest[index] = src[index];
-		else
-		{
-			dest[index] = '\0';
-			break ;
-		}	
+	while (index < n && src[index] != '\0')
+	{
+		dest[index] = src[index];
 		index++;
 	}
-	return(dest);
+	while (index < n)
+	{
+		dest[index] = '\0';
+		index++;
+	}
+	return (dest);
 }
