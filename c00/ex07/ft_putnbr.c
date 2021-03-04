@@ -6,7 +6,7 @@
 /*   By: wding-ha <wding-ha@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/22 19:05:44 by wding-ha          #+#    #+#             */
-/*   Updated: 2021/02/23 22:42:55 by wding-ha         ###   ########.fr       */
+/*   Updated: 2021/03/02 12:29:27 by wding-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ft_putnbr(int nb)
 	}
 	else
 	{
-		ft_putnbr('0' + nb / 10);
-		ft_putnbr('0' + nb % 10);
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
 	}
 }
