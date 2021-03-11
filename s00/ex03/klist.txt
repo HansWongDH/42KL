@@ -1,5 +1,0 @@
-Credentials cache: API:969F9260-164B-4CF2-91A4-F012E807D951
-        Principal: wding-ha@42KL.EDU.MY
-
-  Issued                Expires               Principal
-Feb 18 22:58:59 2021  Feb 19 08:58:52 2021  krbtgt/42KL.EDU.MY@42KL.EDU.MY
